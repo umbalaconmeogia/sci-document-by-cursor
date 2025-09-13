@@ -1,0 +1,109 @@
+# Cursor Rules for Scientific Document Writing
+
+## Project Context
+This workspace is focused on scientific document writing using Markdown as the content layer, with the primary goal of converting documents to DOCX format using Pandoc.
+
+## Markdown to DOCX Conversion Guidelines
+
+### Table Formatting
+- Use HTML tables with CSS classes for layout instead of Markdown tables
+- Use `no-border-table` class for borderless tables
+- Apply `vertical-align: top` for proper cell alignment
+- Example:
+```markdown
+<style>
+.no-border-table {
+    border: none;
+    border-collapse: collapse;
+}
+.no-border-table td {
+    border: none;
+    padding: 8px;
+    vertical-align: top;
+}
+</style>
+
+<table class="no-border-table">
+<tr>
+<td>Content</td>
+</tr>
+</table>
+```
+
+### Page Breaks
+- Use `<div style="page-break-before: always;"></div>` for page breaks
+- Avoid `<div class="page-break"></div>` without CSS definition
+- Alternative: Use `\newpage` for Pandoc-specific page breaks
+
+### Line Breaks and Spacing
+- Use `<br>` or `<br/>` for line breaks within HTML elements
+- Avoid using Enter/Return for line breaks in `<td>` elements
+- Use blank lines for paragraph spacing
+- Use `<div style="height: 20px;"></div>` for precise spacing control
+
+### Multi-column Layout
+- Use CSS classes for two-column table layouts
+- Apply `two-column` class to the table element
+- Use `width: 50%` for each column in two-column tables
+- Example with `two-column` class:
+```markdown
+<style>
+.two-column td {
+    width: 50%;
+}
+</style>
+
+<table class="no-border-table two-column">
+<tr>
+<td>Column 1 content</td>
+<td>Column 2 content</td>
+</tr>
+</table>
+```
+- Alternative: Use Flexbox with `display: flex; gap: 20px;`
+- For single-cell two-column layout, wrap content in `<div>` elements
+
+### CSS Best Practices
+- Use CSS classes for reusable styles (preferred approach)
+- Always include `<style>` block at the beginning of documents when using classes
+- Use inline CSS only for one-off styling needs
+- Test CSS compatibility with Pandoc conversion
+- Common classes: `no-border-table`, `two-column`, `page-break`
+- Apply multiple classes to table: `class="no-border-table two-column"`
+
+### Document Structure
+- Use standard Markdown headers (# ## ###)
+- Apply consistent formatting for scientific documents
+- Include proper metadata for document conversion
+- Use semantic HTML elements when needed
+
+### Pandoc Conversion Commands
+```bash
+# Convert to DOCX
+pandoc input.md -o output.docx
+
+# Convert to PDF
+pandoc input.md -o output.pdf
+
+# Convert with custom template
+pandoc input.md --template=template.docx -o output.docx
+```
+
+## File Organization
+- Keep Markdown files in `docs/` directory
+- Store templates in `docs/template-*` files
+- Maintain sample documents in `docs/sample/`
+- Use descriptive filenames with Vietnamese characters when appropriate
+
+## Writing Guidelines
+- Write in Vietnamese for Vietnamese academic documents
+- Follow academic writing standards
+- Use proper citation formats
+- Maintain consistent terminology throughout documents
+- Include proper document metadata (title, author, date, etc.)
+
+## Quality Assurance
+- Always test Pandoc conversion before finalizing documents
+- Verify table formatting in converted DOCX files
+- Check page breaks and spacing in output documents
+- Ensure proper font rendering and layout preservation

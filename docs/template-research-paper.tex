@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages for Vietnamese
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+
+% Essential packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+% Page setup
+\geometry{margin=2.5cm}
+\onehalfspacing
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\leftmark}
+
+% Title and author information
+\title{[Tiêu đề nghiên cứu]}
+\author{[Tên tác giả]\\
+\small [Tên trường/tổ chức]\\
+\small \texttt{[email@domain.com]}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+[Tóm tắt nghiên cứu 200-300 từ. Bao gồm mục tiêu, phương pháp, kết quả chính và kết luận.]
+\end{abstract}
+
+\textbf{Từ khóa:} [từ khóa 1, từ khóa 2, từ khóa 3]
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Giới thiệu}
+
+\subsection{Bối cảnh nghiên cứu}
+[Mô tả vấn đề nghiên cứu và tầm quan trọng]
+
+\subsection{Tình hình nghiên cứu}
+[Tổng quan các nghiên cứu liên quan]
+
+\subsection{Khoảng trống nghiên cứu}
+[Xác định vấn đề chưa được giải quyết]
+
+\subsection{Mục tiêu và câu hỏi nghiên cứu}
+[Mục tiêu cụ thể và câu hỏi nghiên cứu]
+
+\section{Tổng quan tài liệu}
+
+\subsection{Cơ sở lý thuyết}
+[Các lý thuyết nền tảng]
+
+\subsection{Các nghiên cứu liên quan}
+[Phân tích các nghiên cứu trước đây]
+
+\subsection{Khung lý thuyết}
+[Khung lý thuyết cho nghiên cứu]
+
+\section{Phương pháp nghiên cứu}
+
+\subsection{Thiết kế nghiên cứu}
+[Mô tả thiết kế nghiên cứu]
+
+\subsection{Mẫu nghiên cứu}
+[Mô tả đối tượng và mẫu nghiên cứu]
+
+\subsection{Thu thập dữ liệu}
+[Phương pháp thu thập dữ liệu]
+
+\subsection{Phân tích dữ liệu}
+[Phương pháp phân tích dữ liệu]
+
+\section{Kết quả}
+
+\subsection{Thống kê mô tả}
+[Thống kê cơ bản về dữ liệu]
+
+% Ví dụ về bảng
+\begin{table}[h]
+\centering
+\caption{Mô tả bảng}
+\label{tab:example}
+\begin{tabular}{|l|c|c|}
+\hline
+Biến số & Giá trị & Ghi chú \\
+\hline
+Biến 1 & 123 & Đơn vị \\
+Biến 2 & 456 & Đơn vị \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Kết quả phân tích chính}
+[Kết quả chính của nghiên cứu]
+
+% Ví dụ về hình ảnh
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{figure1.png}
+\caption{Mô tả hình ảnh}
+\label{fig:example}
+\end{figure}
+
+\subsection{Kết quả phân tích bổ sung}
+[Các phân tích bổ sung]
+
+\section{Thảo luận}
+
+\subsection{Giải thích kết quả}
+[Giải thích ý nghĩa của kết quả]
+
+\subsection{So sánh với nghiên cứu trước}
+[So sánh với các nghiên cứu khác, ví dụ: theo Smith et al. \cite{smith2023}]
+
+\subsection{Hạn chế của nghiên cứu}
+[Những hạn chế và điểm yếu]
+
+\subsection{Gợi ý nghiên cứu tương lai}
+[Hướng nghiên cứu tiếp theo]
+
+\section{Kết luận}
+
+\subsection{Tóm tắt kết quả chính}
+[Tóm tắt các phát hiện quan trọng]
+
+\subsection{Đóng góp của nghiên cứu}
+[Đóng góp về mặt lý thuyết và thực tiễn]
+
+\subsection{Khuyến nghị}
+[Các khuyến nghị dựa trên kết quả]
+
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{references}
+
+% Nếu không có file .bib, có thể sử dụng thebibliography
+% \begin{thebibliography}{99}
+% \bibitem{smith2023}
+% Smith, J., Doe, A. (2023). Title of the paper. \textit{Journal Name}, 15(2), 123-145.
+% \end{thebibliography}
+
+\appendix
+\section{Phụ lục A}
+[Nội dung phụ lục]
+
+\end{document}
+
+% Hướng dẫn biên dịch:
+% 1. Cài đặt LaTeX (TeX Live, MiKTeX, hoặc MacTeX)
+% 2. Chạy: pdflatex template-research-paper.tex
+% 3. Nếu có tài liệu tham khảo: bibtex template-research-paper
+% 4. Chạy lại pdflatex hai lần để cập nhật tham chiếu
+
+% Ghi chú về việc sử dụng AI trong Cursor IDE:
+% - Có thể yêu cầu AI viết các phần cụ thể bằng LaTeX
+% - Prompt ví dụ: "Hãy viết phần giới thiệu bằng LaTeX cho nghiên cứu về [chủ đề]"
+% - AI có thể giúp format công thức toán học, bảng, và hình ảnh
+% - Luôn kiểm tra syntax LaTeX sau khi AI tạo ra
